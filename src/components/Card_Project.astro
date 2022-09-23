@@ -1,0 +1,48 @@
+---
+export interface Props{
+    title:string;
+    description:string;
+    link:string;
+    categories:string[];
+}
+const { title, description, link, categories } = Astro.props;
+---
+
+<div class="p-4 w-96">
+    <div class="h-full bgmd-color  bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+      <h2 class="tracking-widest text-xs title-font font-medium lg-color mb-1">{categories}</h2>
+      <h1 class="title-font sm:text-2xl text-xl font-medium dk-color mb-3">{title}</h1>
+      <p class="leading-relaxed mb-3 p-2 rounded-xl bgdk-color md-color ">{description}</p>
+      <a class="lg-color hover:text-gray-200 inline-flex items-center" href={link}>GitHub
+        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+      
+    </div>
+  </div>
+
+  <style>
+	.lg-color{
+		color:var(--lighter-color)
+	}
+	.md-color{
+		color:var(--mid-color);
+	}
+	.dk-color{
+		color: var(--darker-color);
+	}
+
+    .bglg-color{
+		background-color:var(--lighter-color)
+	}
+	.bgmd-color{
+		background-color:var(--mid-color);
+	}
+	.bgdk-color{
+		background-color: var(--darker-color);
+	}
+
+
+</style>

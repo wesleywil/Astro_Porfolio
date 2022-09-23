@@ -1,0 +1,52 @@
+---
+// Layouts
+import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
+//Components
+import Navbar from '../components/Navbar.astro';
+import CardProject from '../components/Card_Project.astro';
+---
+
+<Layout title="Wesley Wilson - Portfolio">
+<div class='flex h-screen'>
+	<Navbar/>
+    <div class="flex justify-center items-center mx-auto w-full gap-24">
+		<div class="flex flex-col  gap-2 float-left">
+			<div class="text-6xl md-color font-bold">
+				<h1 class="text-8xl text-center">Projects</h1>
+			</div>
+            <div class="flex flex-col justify-center text-center gap-2 p-2 m-2">
+                <h1 class="text-white text-4xl">Personal</h1>
+                <div class=" flex gap-2 justify-center">
+                    <CardProject title="Goto Project" description="personal project" link="https://github.com/wesleywil/" categories={['reactjs ', '+ django']}/>
+                    <CardProject title="Portfolio" description="personal porfolio" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
+                </div>
+                <h1 class="text-white text-4xl">Others</h1>
+                <div class=" flex gap-2 justify-center">
+                    <CardProject title="Goto Project" description="personal project" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
+                    <CardProject title="Portfolio" description="personal porfolio" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
+                </div>
+            </div>  
+		</div>
+        
+    </div>
+</div>
+</Layout>
+
+<style>
+	.lg-color{
+		color:var(--lighter-color)
+	}
+	.md-color{
+		color:var(--mid-color);
+	}
+	.dk-color{
+		color: var(--darker-color);
+	}
+
+	.md-border:hover{
+		border:1px solid var(--mid-color);
+		color:var(--mid-color)
+	}
+
+</style>
