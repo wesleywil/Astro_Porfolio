@@ -1,3 +1,9 @@
-<div class="flex  items-center w-full pl-36">
+---
+export interface Props{
+    myClass:string;
+}
+const { myClass } = Astro.props;
+---
+<div class={myClass}>
     <slot/>
 </div>

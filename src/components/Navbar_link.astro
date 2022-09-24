@@ -1,8 +1,9 @@
 ---
 export interface Props {
     link_text:string;
+    link:string;
 }
-const { link_text } = Astro.props;
+const { link_text, link } = Astro.props;
 ---
 
-<li class="m-2"><a href="#">{link_text}</a></li>
+<li class="m-2"><a href={link}>{link_text}</a></li>

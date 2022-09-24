@@ -5,16 +5,16 @@ import NavbarLink from "./Navbar_link.astro";
 <div class=" flex flex-col justify-between items-center w-52 p-2 narbar_bg navbar_text">
     <div>
         <a href="#">
-            <img src="/lighter_logo.svg" alt="wesley wilson logo" class="w-24 mx-auto">
+            <img src="/lighter_logo.svg" alt="wesley wilson logo" class="w-24 mx-auto px-4">
             <h1 class="ml-1 text-xl font-semibold text-center">Wesley Wilson</h1>
         </a>
     </div>
     
     <ul class="text-3xl font-semibold p-2">
-        <NavbarLink link_text="Projects"/>
-        <NavbarLink link_text="Skills"/>
-        <NavbarLink link_text="About"/>
-        <NavbarLink link_text="Contact"/>
+        <NavbarLink link_text="Projects" link="/projects"/>
+        <NavbarLink link_text="Skills" link="/skills"/>
+        <NavbarLink link_text="About" link="/about"/>
+        <NavbarLink link_text="Contact" link="/contact"/>
     </ul>
     <h3>simple is beautiful.</h3>
 </div>
