@@ -1,0 +1,18 @@
+---
+export interface Props{
+    tech:string;
+    progress:number;
+}
+const { tech, progress } = Astro.props;
+---
+
+<div class="h-12 ">
+    <div class="flex">
+      <h1 class="text-left text-white text-xl">{tech}</h1>
+    </div>
+    <div class="text-left">
+        <progress class="progress progress-warning w-full" value={progress} max="100"></progress>
+    </div>
+  </div>
+
+  

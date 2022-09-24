@@ -1,0 +1,76 @@
+---
+// Layouts
+import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
+//Components
+import Navbar from '../components/Navbar.astro';
+import CardSkill from '../components/Card_Skill.astro';
+---
+
+<Layout title="Wesley Wilson - Portfolio">
+<div class='flex h-screen'>
+	<Navbar/>
+	<Main myClass="flex  items-center w-full pl-2">
+		<div class="flex gap-2">
+			<div class="w-1/2 text-2xl self-center lg-color font-semibold">
+                <h1 class="m-2 p-2 text-6xl"><span class="m-0 md-color text-7xl">S</span>kills</h1>
+				<p class="m-2 p-2">I create amazing web apps that are fast and easy to use. The main
+                    technologies used in my apps are Html, CSS, Javascript to Front-end
+                    and manly Python to Back-end.</p>
+                <p class="m-2 p-2">I like to experience with other tech as well, that's why I'm using
+                    nowadays Tauri an amazing framework to create desktop apps using rust
+                    as the backend language and reactjs at the Front-end.</p>
+				<div class="flex mt-2 ml-4">
+					<button class="border border-white md-border text-white text-3xl font-semibold px-2 py-1 rounded-xl">Contact Me</button>
+				</div>
+			</div>
+            <div class="flex flex-col w-1/3 w-1/2 p-2">
+                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 px-1 rounded">Main</h1>
+                <CardSkill tech="Front-end" progress={60}/>
+                <CardSkill tech="Back-end" progress={55}/>
+                <CardSkill tech="ReactJs" progress={50}/>
+                <CardSkill tech="Django" progress={60}/>
+                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Programming Languages</h1>
+                <CardSkill tech="Javascript" progress={60}/>
+                <CardSkill tech="Python" progress={70}/>
+                <CardSkill tech="Rust" progress={20}/>
+                <CardSkill tech="Java" progress={45}/>
+                <CardSkill tech="PHP" progress={45}/>
+                <CardSkill tech="Pascal" progress={30}/>
+                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Data Base</h1>
+                <CardSkill tech="SQL" progress={80}/>
+                <CardSkill tech="NO-SQL" progress={60}/>
+
+            </div>
+		</div>
+	</Main>
+</div>
+</Layout>
+
+<style>
+	.lg-color{
+		color:var(--lighter-color)
+	}
+	.md-color{
+		color:var(--mid-color);
+	}
+	.dk-color{
+		color: var(--darker-color);
+	}
+
+	.md-border:hover{
+		border:1px solid var(--mid-color);
+		color:var(--mid-color)
+	}
+
+    .bglg-color{
+		background-color:var(--lighter-color)
+	}
+	.bgmd-color{
+		background-color:var(--mid-color);
+	}
+	.bgdk-color{
+		background-color: var(--darker-color);
+	}
+
+</style>
