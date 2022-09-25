@@ -5,6 +5,7 @@ import Main from '../layouts/Main.astro';
 //Components
 import Navbar from '../components/Navbar.astro';
 import CardSkill from '../components/Card_Skill.astro';
+import ContactButton from '../components/Contact_Button.astro';
 ---
 
 <Layout title="Wesley Wilson - Portfolio">
@@ -20,9 +21,7 @@ import CardSkill from '../components/Card_Skill.astro';
                 <p class="m-2 p-2">I like to experience with other tech as well, that's why I'm using
                     nowadays Tauri an amazing framework to create desktop apps using rust
                     as the backend language and reactjs at the Front-end.</p>
-				<div class="flex mt-2 ml-4">
-					<button class="border border-white md-border text-white text-3xl font-semibold px-2 py-1 rounded-xl">Contact Me</button>
-				</div>
+				<ContactButton/>
 			</div>
             <div class="flex flex-col w-1/3 w-1/2 p-2">
                 <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 px-1 rounded">Main</h1>
