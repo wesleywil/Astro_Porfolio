@@ -1,0 +1,44 @@
+---
+// Layouts
+import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
+//Components
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Wesley Wilson - Portfolio">
+<div class='flex h-screen'>
+	<Navbar/>
+	<Main myClass="flex  items-center w-full pl-36">
+		<div class="flex gap-2">
+			<div class="text-6xl md-color font-bold">
+				<h1 class="text-8xl">Hello,</h1>
+				<h1>I'm <span class="m-0 lg-color text-7xl">W</span>esley <span class="lg-color text-7xl">W</span>ilson,</h1>
+				<h2 class="m-0">Web Developer</h2>
+				<h3 class="text-xl pl-1 m-0 font-semibold">ReactJs + Django</h3>
+				<div class="flex mt-2">
+					<button class="border border-white md-border text-white text-3xl font-semibold px-2 py-1 rounded-xl">Contact Me</button>
+				</div>
+			</div>
+		</div>
+	</Main>
+</div>
+</Layout>
+
+<style>
+	.lg-color{
+		color:var(--lighter-color)
+	}
+	.md-color{
+		color:var(--mid-color);
+	}
+	.dk-color{
+		color: var(--darker-color);
+	}
+
+	.md-border:hover{
+		border:1px solid var(--mid-color);
+		color:var(--mid-color)
+	}
+
+</style>
