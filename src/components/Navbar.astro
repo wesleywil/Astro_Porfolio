@@ -2,11 +2,11 @@
 import NavbarLink from "./Navbar_link.astro";
 ---
 
-<div class=" flex flex-col justify-between items-center w-52 p-2 narbar_bg navbar_text">
+<div class=" flex flex-col justify-between items-center w-52 p-2 narbar_bg ">
     <div>
-        <a href="#">
+        <a href="/homepage">
             <img src="/lighter_logo.svg" alt="wesley wilson logo" class="w-24 mx-auto px-4">
-            <h1 class="ml-1 text-xl font-semibold text-center">Wesley Wilson</h1>
+            <h1 class="ml-1 text-xl font-semibold text-center navbar_text transition duration-700 ease-in-out">Wesley Wilson</h1>
         </a>
     </div>
     
@@ -16,14 +16,41 @@ import NavbarLink from "./Navbar_link.astro";
         <NavbarLink link_text="About" link="/about"/>
         <NavbarLink link_text="Contact" link="/contact"/>
     </ul>
-    <h3>simple is beautiful.</h3>
+    <h3 class="simple_beautiful">simple is beautiful.</h3>
 </div>
 
 <style>
     .narbar_bg{
         background-color: var(--mid-color);
     }
+    
     .navbar_text{
         color:var(--darker-color);
     }
+    .navbar_text:hover{
+        color:var(--lighter-color);
+    }
+
+    .simple_beautiful{
+        font-weight: 600;
+        color: var(--darker-color);
+        padding: 10px;
+    }
+    .simple_beautiful:hover{
+        font-weight: bold;
+        color:var(--lighter-color);
+        animation: shrinkjump 2s ease-in;
+    }
+
+    @keyframes shrinkjump {
+  0% {
+    transform: rotateX(0deg) scaleX(1.8);
+  }
+  50%{
+    transform: rotateX(360deg) scaleX(2.2);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
 </style>
