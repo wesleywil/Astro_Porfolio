@@ -4,22 +4,24 @@ import Layout from '../layouts/Layout.astro';
 import Main from '../layouts/Main.astro';
 //Components
 import Navbar from '../components/Navbar.astro';
+import ContactButton from "../components/Contact_Button.astro"
 ---
 
 <Layout title="Wesley Wilson - Portfolio">
 <div class='flex h-screen'>
 	<Navbar/>
-	<Main myClass="flex  items-center w-full pl-36">
-		<div class="flex gap-2">
+	<Main myClass="flex items-center xl:flex-row md:flex-col w-full xl:pl-36 md:pl-0">
+		<div class="flex gap-2 xl:mt-0 md:mt-20">
 			<div class="text-6xl md-color font-bold">
-				<h1 class="text-8xl">Hello,</h1>
-				<h1>I'm <span class="m-0 lg-color text-7xl">W</span>esley <span class="lg-color text-7xl">W</span>ilson,</h1>
-				<h2 class="m-0">Web Developer</h2>
-				<h3 class="text-xl pl-1 m-0 font-semibold">ReactJs + Django</h3>
-				<div class="flex mt-2">
-					<button class="border border-white md-border text-white text-3xl font-semibold px-2 py-1 rounded-xl">Contact Me</button>
-				</div>
+				<h1 class="text-8xl ml-4">Hello,</h1>
+				<h1 class="ml-4">I'm <span class="inline-block m-0 lg-color test text-7xl">W</span>esley <span class="inline-block lg-color text-7xl">W</span>ilson,</h1>
+				<h2 class="m-0 ml-4">Web Developer</h2>
+				<h3 class="text-xl pl-1 m-0 ml-4 font-semibold">ReactJs + Django</h3>
+				<ContactButton/>
 			</div>
+		</div>
+		<div class="bg-container">
+			<img src="/web-development.svg" alt="Web Development Image">
 		</div>
 	</Main>
 </div>
@@ -29,16 +31,39 @@ import Navbar from '../components/Navbar.astro';
 	.lg-color{
 		color:var(--lighter-color)
 	}
+	.lg-color:hover{
+		animation: letter_animation 2s ease-in;
+		animation-iteration-count: infinite;
+	}
 	.md-color{
 		color:var(--mid-color);
 	}
 	.dk-color{
 		color: var(--darker-color);
 	}
+	@keyframes letter_animation {
+  		0% {
+    		transform: rotateY(0deg);
+  		}
+		50%{
+			transform:rotateZ(-30deg);
+		}
+  		75%{
+    		transform: rotateZ(30deg);
+  		}
+		100%{
+			transform:rotateZ(0deg);
+		}
+		
+	}
 
-	.md-border:hover{
-		border:1px solid var(--mid-color);
-		color:var(--mid-color)
+	.bg-container{
+		width:900px;
+	}
+	@media(max-width:1200px){
+		.bg-container{
+			width:600px;
+		}
 	}
 
 </style>
