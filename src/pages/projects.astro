@@ -1,32 +1,32 @@
 ---
 // Layouts
 import Layout from '../layouts/Layout.astro';
-import Main from '../layouts/Main.astro';
 //Components
 import Navbar from '../components/Navbar.astro';
 import CardProject from '../components/Card_Project.astro';
 ---
 
 <Layout title="Wesley Wilson - Portfolio">
-<div class='flex h-screen'>
+<div class='flex size_window'>
 	<Navbar/>
-    <div class="flex justify-center items-center mx-auto w-full gap-24">
-		<div class="flex flex-col  gap-2 float-left">
-			<div class="text-6xl md-color font-bold">
-				<h1 class="text-8xl text-center">Projects</h1>
+    <div class="flex justify-center xl:items-center mx-auto w-full xl:gap-24 md:gap-4">
+		<div class="flex flex-col gap-2 float-left">
+			<div class="md-color font-bold">
+				<h1 class="xl:text-8xl md:text-5xl text-center">Projects</h1>
 			</div>
-            <div class="flex flex-col justify-center text-center gap-2 p-2 m-2">
-                <h1 class="text-white text-4xl">Personal</h1>
-                <div class=" flex gap-2 justify-center">
-                    <CardProject title="Goto Project" description="personal project" link="https://github.com/wesleywil/" categories={['reactjs ', '+ django']}/>
-                    <CardProject title="Portfolio" description="personal porfolio" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
+            <div class="flex flex-col  xl:justify-center text-center gap-2 p-2 m-2 overflow-y-auto">
+                <h1 class="text-white xl:text-4xl md:text-2xl">Personal</h1>
+                <div class=" flex flex-wrap gap-1 justify-center">
+                    <CardProject title="BUG TRACKER" description="This is a desktop top app to track bugs, that I'm creating to track bugs and issues in my future and current projects." link="https://github.com/wesleywil/bug-tracker" categories={['Reactjs ', '+ Tauri ', '+ javascript']}/>
+                    <CardProject title="Portfolio" description="My personal portfolio using django + reacjs and other tech, This is where I'm going to display my works as a fullstatck-developer" link="https://github.com/wesleywil/Portfolio" categories={['Reactjs ', '+ Django']}/>
+					<CardProject title="GOTO PROJECT" description="This project is for my animes management, I'm replacing a notepad txt with a lot animes that I watched, still watching or dropped for the last 8 years to this new project that I pretend to use daily" link="https://github.com/wesleywil/Goto-Project" categories={['Reactjs ', '+ Tauri ', '+ javascript']}/>
+					<CardProject title="Hotel Project" description="An Hotel/AIRBNB style project to let customers to get rooms in hotels or cabins in the woods, I'm using this to explore how to use Django with Reactjs" link="https://github.com/wesleywil/hotel-project" categories={['Reactjs ', '+ Django']}/>
                 </div>
-                <h1 class="text-white text-4xl">Others</h1>
+                <h1 class="text-white text-4xl md:text-2xl">Others</h1>
                 <div class=" flex gap-2 justify-center">
-                    <CardProject title="Goto Project" description="personal project" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
-                    <CardProject title="Portfolio" description="personal porfolio" link="https://github.com/wesleywil/" categories={['reactjs ', '+ javascript']}/>
+                    <CardProject title="Clothing Shop" description="A Clothing Shop project build in the course zero to hero REACTJS" link="https://github.com/wesleywil/clothing-shop" categories={['Reactjs ', '+ Javascript', '+ Firebase']}/>
                 </div>
-            </div>  
+            </div>
 		</div>
         
     </div>
@@ -34,6 +34,17 @@ import CardProject from '../components/Card_Project.astro';
 </Layout>
 
 <style>
+
+	.size_window{
+		height:100vh;
+	}
+
+	@media(max-height:2000px){
+		.size_window{
+			height: 100%;
+		}
+	}
+
 	.lg-color{
 		color:var(--lighter-color)
 	}
