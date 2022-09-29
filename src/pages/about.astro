@@ -10,22 +10,22 @@ import ContactButton from '../components/Contact_Button.astro';
 <Layout title="Wesley Wilson - Portfolio">
 <div class='flex h-screen'>
 	<Navbar/>
-	<Main myClass="flex  items-center w-full pl-2">
+	<Main myClass="flex flex-col xl:flex-row md:flex-row  items-center w-full pl-2">
 		<div class="flex gap-4 xl:justify-between md:justify-center">
-			<div class="xl:w-2/5 md:w-full text-2xl self-center lg-color font-semibold">
-                <h1 class="m-2 p-2 text-6xl"><span class="m-0 md-color text-7xl">A</span>bout <span class="m-0 md-color text-7xl">M</span>e</h1>
-				<p class="m-2 p-2 text-justify">I'm a Full-Stack Developer located in Brazil, I love technology and art, 
+			<div class="xl:w-2/5 md:w-full text-base	 xl:text-2xl md:text-2xl self-center lg-color font-semibold">
+                <h1 class="mb-2 xl:m-2 md:m-2 p-2 text-4xl xl:text-6xl md:text-6xl"><span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">A</span>bout <span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">M</span>e</h1>
+				<p class="xl:m-2 md:m-2 mb-2 xl:p-2 md:p-2 text-left xl:text-justify">I'm a Full-Stack Developer located in Brazil, I love technology and art, 
                     especially when we can combine both, like beautiful sites, digital paintings and 3d modeling.</p>
-                <p class="mx-2 px-2 text-justify">I'm always trying to improve myself by everyday becoming a little better, 
+                <p class="xl:mx-2 md:mx-2 xl:px-2 md:px-2 text-left xl:text-justify">I'm always trying to improve myself by everyday becoming a little better, 
                     I love to learn new tech and challenge myself with frameworks and programming languages.
                     I really Love music, I'm Fan of Football(Soccer), E-sports, animes, comics, and mangas.</p>
-                <p class="m-2 p-2 text-justify">
+                <p class="xl:m-2 md:m-2 mt-2 xl:p-2 md:p-2 text-left xl:text-justify">
                     Interested in front-end and backend, working right now in personal projects, 
                     but always ready for a new challenge in my starting career.
                 </p>
 				<ContactButton/>
 			</div>
-            <div class="flex flex-col xl:block md:hidden mr-12">
+            <div class="flex flex-col hidden xl:block mr-12">
                 <img src="/programming.svg" alt="Programming Image">
             </div>
 		</div>

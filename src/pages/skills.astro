@@ -9,11 +9,11 @@ import ContactButton from '../components/Contact_Button.astro';
 ---
 
 <Layout title="Wesley Wilson - Portfolio">
-<div class='flex h-screen'>
+<div class='flex sm:h-screen'>
 	<Navbar/>
-	<Main myClass="flex  items-center w-full pl-2">
-		<div class="flex gap-2">
-			<div class="w-1/2 text-2xl self-center lg-color font-semibold">
+	<Main myClass="flex  sm:items-center w-full xl:pl-2 md:pl-2">
+		<div class="flex flex-col sm:flex-row gap-2 ">
+			<div class="w-full sm:w-1/2 sm:text-2xl self-center lg-color font-semibold pb-2 xl:pb-0 border-b-2 xl:border-0 md:border-0">
                 <h1 class="m-2 p-2 text-6xl"><span class="m-0 md-color text-7xl">S</span>kills</h1>
 				<p class="m-2 p-2">I create amazing web apps that are fast and easy to use. The main
                     technologies used in my apps are Html, CSS, Javascript to Front-end
@@ -21,22 +21,25 @@ import ContactButton from '../components/Contact_Button.astro';
                 <p class="m-2 p-2">I like to experience with other tech as well, that's why I'm using
                     nowadays Tauri an amazing framework to create desktop apps using rust
                     as the backend language and reactjs at the Front-end.</p>
-				<ContactButton/>
+				<div class="ml-2 pl-2">
+					<ContactButton/>
+				</div>
+				
 			</div>
-            <div class="flex flex-col w-1/3 w-1/2 p-2">
-                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 px-1 rounded">Main</h1>
+            <div class="flex flex-col sm:w-1/2 p-2 ">
+                <h1 class="text-2xl xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 px-1 rounded">Main</h1>
                 <CardSkill tech="Front-end" progress={60}/>
                 <CardSkill tech="Back-end" progress={55}/>
                 <CardSkill tech="ReactJs" progress={50}/>
                 <CardSkill tech="Django" progress={60}/>
-                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Programming Languages</h1>
+                <h1 class="text-2xl xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Programming Languages</h1>
                 <CardSkill tech="Javascript" progress={60}/>
                 <CardSkill tech="Python" progress={70}/>
                 <CardSkill tech="Rust" progress={20}/>
                 <CardSkill tech="Java" progress={45}/>
                 <CardSkill tech="PHP" progress={45}/>
                 <CardSkill tech="Pascal" progress={30}/>
-                <h1 class="xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Data Base</h1>
+                <h1 class="text-2xl xl:text-3xl md:text-xl bglg-color dk-color font-bold w-fit mb-4 mt-2 px-1 rounded">Data Base</h1>
                 <CardSkill tech="SQL" progress={80}/>
                 <CardSkill tech="NO-SQL" progress={60}/>
 

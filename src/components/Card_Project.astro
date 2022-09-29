@@ -8,11 +8,11 @@ export interface Props{
 const { title, description, link, categories } = Astro.props;
 ---
 
-<div class="p-4 xl:w-96 ">
-    <div class="h-full bgmd-color  bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+<div class="p-2 xl:p-4 md:p-4 xl:w-96 ">
+    <div class="h-full bgmd-color  bg-opacity-75 px-8 pt-2 xl:pt-16 md:pt-16 pb-2 xl:pb-24 md:pb-24 rounded-lg overflow-hidden text-center relative">
       <h2 class="tracking-widest text-xs title-font font-medium lg-color mb-1">{categories}</h2>
       <h1 class="title-font sm:text-2xl text-xl font-medium dk-color mb-3">{title}</h1>
-      <p class="leading-relaxed mb-3 p-2 rounded-xl bgdk-color md-color ">{description}</p>
+      <p class="leading-relaxed mb-3 p-2 rounded-xl bgdk-color lg-color">{description}</p>
     
       <a class="lg-color hover:text-gray-200 inline-flex items-center tooltip tooltip-bottom" href={link} data-tip="Visit">
 		<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">

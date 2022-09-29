@@ -12,15 +12,19 @@ import ContactButton from "../components/Contact_Button.astro"
 	<Navbar/>
 	<Main myClass="flex items-center xl:flex-row md:flex-col w-full xl:pl-36 md:pl-0">
 		<div class="flex gap-2 xl:mt-0 md:mt-20">
-			<div class="text-6xl md-color font-bold">
-				<h1 class="text-8xl ml-4">Hello,</h1>
-				<h1 class="ml-4">I'm <span class="inline-block m-0 lg-color test text-7xl">W</span>esley <span class="inline-block lg-color text-7xl">W</span>ilson,</h1>
-				<h2 class="m-0 ml-4">Web Developer</h2>
-				<h3 class="text-xl pl-1 m-0 ml-4 font-semibold">ReactJs + Django</h3>
+			<div class="md-color font-bold">
+				<h1 class="text-3xl sm:text-8xl ml-4">Hello,</h1>
+				<h1 class="ml-4 text-2xl sm:text-6xl">I'm 
+					<span class="inline-block m-0 lg-color test text-3xl sm:text-7xl">W</span>esley 
+					<span class="inline-block lg-color text-3xl sm:text-7xl">W</span
+						>ilson,
+				</h1>
+				<h2 class="m-0 ml-4 text-2xl sm:text-6xl">Web Developer</h2>
+				<h3 class="text-lg	sm:text-xl pl-1 m-0 ml-4 font-semibold">ReactJs + Django</h3>
 				<ContactButton/>
 			</div>
 		</div>
-		<div class="bg-container">
+		<div class="bg-container hidden sm:block">
 			<img src="/web-development.svg" alt="Web Development Image">
 		</div>
 	</Main>
