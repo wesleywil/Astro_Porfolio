@@ -1,19 +1,19 @@
 ---
 // Layouts
-import Layout from "../layouts/Layout.astro";
-import Main from "../layouts/Main.astro";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../layouts/Main.astro";
 //Components
-import Navbar from "../components/Navbar.astro";
-import ContactButton from "../components/Contact_Button.astro";
+import Navbar from "../../components/Navbar.astro";
+import ContactButton from "../../components/Contact_Button.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("en");
+changeLanguage("pt");
 ---
 
 <Layout>
-<div class='flex h-screen'>
+<div class='flex tamanho '>
 	<Navbar/>
-	<Main myClass="flex flex-col xl:flex-row md:flex-row  items-center w-full pl-2">
+	<Main myClass="flex flex-col xl:flex-row md:flex-row  items-center w-full pl-2 pb-4">
 		<div class="flex gap-4 xl:justify-between md:justify-center">
 			<div class="xl:w-2/5 md:w-full text-base xl:text-2xl md:text-2xl self-center lg-color font-semibold">
                 <h1 class="mb-2 xl:m-2 md:m-2 p-2 text-4xl xl:text-6xl md:text-6xl"><span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">{t("about.first_letter_one")}</span>{t("about.title_one")} <span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">{t("about.first_letter_two")}</span>{t("about.title_two")}</h1>
@@ -33,6 +33,15 @@ changeLanguage("en");
 </Layout>
 
 <style>
+	.tamanho{
+		height:100vh;
+	}
+	@media(max-height:640px){
+		.tamanho{
+			height:100%;
+		}	
+	}
+
 	.lg-color{
 		color:var(--lighter-color)
 	}

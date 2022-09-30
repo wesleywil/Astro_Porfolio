@@ -1,0 +1,71 @@
+{
+  "site": {
+    "title": "Wesley Wilson - Portfolio",
+    "description": "Personal Portfolio to show my skills and projects"
+  },
+  "navbar": {
+    "title": "Menu",
+    "links": {
+      "projects": "Projects",
+      "skills": "Skills",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "message": "Simple is Beautiful."
+  },
+  "home": {
+    "presentation": "Hello",
+    "sub": "I'm",
+    "third": "Web Developer",
+    "language": "Choose Site Language"
+  },
+  "projects": {
+    "title": "Projects",
+    "sub_one": "Personal",
+    "sub_two": "Others"
+  },
+  "card_project": {
+    "descriptions": {
+      "bug_tracker": "This is a desktop app to track bugs, that I'm creating to track bugs and issues in my future and current projects.",
+      "portfolio": "My personal portfolio using django + reacjs and other tech, This is where I'm going to display my works as a fullstack-developer",
+      "goto": "This project is for my animes management, I'm replacing a notepad txt with a lot animes that I watched, still watching or dropped for the last 8 years to this new project that I pretend to use daily",
+      "hotel_project": "An Hotel/AIRBNB style project to let customers to get rooms in hotels or cabins in the woods, I'm using this to explore how to use Django with Reactjs",
+      "clothing_shop": "A Clothing Shop project build in the course zero to hero REACTJS"
+    }
+  },
+  "skills": {
+    "first_letter": "S",
+    "title": "kills",
+    "text_one": "I create amazing web apps that are fast and easy to use. The main technologies used in my apps are Html, CSS, Javascript to Front-end and manly Python to Back-end.",
+    "text_two": "I like to experience with other tech as well, that's why I'm using nowadays Tauri an amazing framework to create desktop apps using rust as the backend language and reactjs at the Front-end.",
+    "sub_one": "Main",
+    "sub_two": "Programming Language",
+    "sub_three": "Data Base"
+  },
+  "about": {
+    "first_letter_one": "A",
+    "first_letter_two": "M",
+    "title_one": "bout",
+    "title_two": "e",
+    "one": "I'm a Full-Stack Developer located in Brazil, I love technology and art, especially when we can combine both, like beautiful sites, digital paintings and 3d modeling.",
+    "two": "I'm always trying to improve myself by everyday becoming a little better, I love to learn new tech and challenge myself with frameworks and programming languages.I really Love music, I'm Fan of Football(Soccer), E-sports, animes, comics, and mangas.",
+    "three": "Interested in front-end and backend, working right now in personal projects, but always ready for a new challenge in my starting career."
+  },
+  "contact": {
+    "first_letter_one": "C",
+    "first_letter_two": "M",
+    "title_one": "ontact",
+    "title_two": "e",
+    "text": "I'm interested in any good oportunity that can make me a better development, looking for new experiences and ways to grows as a professional, don't hesitate to contact me."
+  },
+  "404": {
+    "warning": "Oops!",
+    "status": "404 - Page Not Found",
+    "text_one": "The page your are looking for might have been removed",
+    "text_two": "had its name changed or is temporarily unavailable.",
+    "btn": "Go To Homepage"
+  },
+  "contact_button": {
+    "message": "Contact Me"
+  }
+}

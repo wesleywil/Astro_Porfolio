@@ -1,14 +1,14 @@
 ---
 // Layouts
-import Layout from "../layouts/Layout.astro";
-import Main from "../layouts/Main.astro";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../layouts/Main.astro";
 //Components
-import Navbar from "../components/Navbar.astro";
-import ContactButton from "../components/Contact_Button.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import Navbar from "../../components/Navbar.astro";
+import ContactButton from "../../components/Contact_Button.astro";
+import { t, changeLanguage } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
 
-changeLanguage("en");
+changeLanguage("pt");
 ---
 
 <Layout>
@@ -23,9 +23,7 @@ changeLanguage("en");
 				<h1 class="text-3xl sm:text-8xl ml-4">{t("home.presentation")}</h1>
 				<h1 class="ml-4 text-2xl sm:text-6xl">{t("home.sub")} 
 					<span class="inline-block m-0 lg-color test text-3xl sm:text-7xl">W</span>esley 
-					<span class="inline-block lg-color text-3xl sm:text-7xl">W</span
-						>ilson,
-				</h1>
+					</h1>
 				<h2 class="m-0 ml-4 text-2xl sm:text-6xl">{t("home.third")}</h2>
 				<h3 class="text-lg	sm:text-xl pl-1 m-0 ml-4 font-semibold">ReactJs + Django</h3>
 				<div class="mt-12 ml-2 pl-2 xl:ml-0 xl:pl-0 md:pl-0 md:ml-0">

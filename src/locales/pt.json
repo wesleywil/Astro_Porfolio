@@ -1,0 +1,71 @@
+{
+  "site": {
+    "title": "Wesley Wilson - Portfólio",
+    "description": "Portfólio pessoal, para mostrar minhas habilidades e projetos"
+  },
+  "navbar": {
+    "title": "Menu",
+    "links": {
+      "projects": "Projetos",
+      "skills": "Habilidades",
+      "about": "Sobre",
+      "contact": "Contato"
+    },
+    "message": "O Simples é bonito."
+  },
+  "home": {
+    "presentation": "Olá,",
+    "sub": "Sou o",
+    "third": "Desenvolvedor Web",
+    "language": "Escolha a linguagem do site."
+  },
+  "projects": {
+    "title": "Projetos",
+    "sub_one": "Pessoais",
+    "sub_two": "Outros"
+  },
+  "card_project": {
+    "descriptions": {
+      "bug_tracker": "Este é um aplicativo para desktop para acompanhar bugs em aplicativos, Que eu estou criando para utilizar em projetos atuais e futuros.",
+      "portfolio": "Meu portfólio pessoal onde estou usando Django e Reactjs assim como outras tecnologias, Neste projeto irei mostrar meus trabalhos como um desenvolvedor fullstack.",
+      "goto": "Este projeto é para gerenciamento de animes, Estou trocando um arquivo de texto com muitos animes que já assisti, estou assistindo ou parei de ver dos ultimos 8 anos, trocarei o arquivo de texto por este aplicativo de computador que pretendo usar diariamente.",
+      "hotel_project": "Um projeto no estilo AIRBNB e Serviços de Hoteis, a onde o projeto permite que clientes possam se hospedar em hoteis ou alugar uma casa de campo, estou fazendo este projeto para explorar o uso do Django com Reactjs.",
+      "clothing_shop": "Um projeto de uma loja de roupas que criei atraves do curso Zero to Mastery em Reactjs"
+    }
+  },
+  "skills": {
+    "first_letter": "H",
+    "title": "abilidades",
+    "text_one": "Crio projetos maravilhosos que são rápidos e fáceis de utilizar. As principais tecnologias utilizadas em minhas aplicações são, Html, CSS, Javascript para o Front-end a na maioria das vezes Python no Backend.",
+    "text_two": "Gosto de testar outras tecnologias também, e é por isso que ultimamente venho usando Tauri, um excelente framework para criação de aplicativos para desktop usando RUST como linguagem backend e podendo utilizar qualquer tecnologia no front, particularmente utilizo reactjs.",
+    "sub_one": "Principais",
+    "sub_two": "Linguagens de Programação",
+    "sub_three": "Banco de Dados"
+  },
+  "about": {
+    "first_letter_one": "S",
+    "first_letter_two": "M",
+    "title_one": "obre",
+    "title_two": "im",
+    "one": "Sou um desenvolvedor Full-Stack localizado em São Paulo, eu amo tecnologia e arte, especialmente quando combinados às duas, como, por exemplo, em sites bem artísticos, pinturas digitais, modelagem 3D e outros tipos de artes digitais, claro também adoro as artes contemporâneas.",
+    "two": "Estou sempre tentando melhorar eu mesmo para que cada dia possa me tornar um pouco melhor, eu amo aprender novas tecnologias e me desafiar com frameworks e outras linguagens de programação. Amo música, sou fã de Futebol, esportes eletrônicos, comics e mangas.",
+    "three": "Interessado em Front-End e Back-end, no momento estou focado em projetos pessoais, mas sempre pronto para buscar novos desafios, principalmente nesse começo de carreira na área de tecnologia."
+  },
+  "contact": {
+    "first_letter_one": "M",
+    "first_letter_two": "C",
+    "title_one": "eus",
+    "title_two": "ontatos",
+    "text": "Estou interessado em qualquer oportunidade que seja boa o suficiente para me fazer um melhor desenvolvedor, estou procurando por novas experiências e formas de crescer profissionalmente, fique a vontade para entrar em contato comigo."
+  },
+  "404": {
+    "warning": "Opa!",
+    "status": "404 - Página não encontrada",
+    "text_one": "Está página que você está procurando pode ter sido removida",
+    "text_two": "teve o nome alterado ou está em manutenção.",
+    "btn": "Ir para Pagina Inicial!"
+  },
+  "contact_button": {
+    "message": "Entre em Contato"
+  }
+}

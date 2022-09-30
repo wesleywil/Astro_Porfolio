@@ -1,14 +1,14 @@
 ---
 // Layouts
-import Layout from "../layouts/Layout.astro";
-import Main from "../layouts/Main.astro";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../layouts/Main.astro";
 //Components
-import Navbar from "../components/Navbar.astro";
-import CardSkill from "../components/Card_Skill.astro";
-import ContactButton from "../components/Contact_Button.astro";
+import Navbar from "../../components/Navbar.astro";
+import CardSkill from "../../components/Card_Skill.astro";
+import ContactButton from "../../components/Contact_Button.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("en");
+changeLanguage("pt");
 ---
 
 <Layout>
@@ -17,7 +17,7 @@ changeLanguage("en");
 	<Main myClass="flex  sm:items-center w-full xl:pl-2 md:pl-2">
 		<div class="flex flex-col sm:flex-row gap-2 ">
 			<div class="w-full sm:w-1/2 sm:text-2xl self-center lg-color font-semibold pb-2 xl:pb-0 border-b-2 xl:border-0 md:border-0">
-                <h1 class="m-2 p-2 text-6xl"><span class="m-0 md-color text-7xl">{t("skills.first_letter")}</span>{t("skills.title")}</h1>
+                <h1 class="m-2 p-2 text-4xl"><span class="m-0 md-color text-5xl">{t("skills.first_letter")}</span>{t("skills.title")}</h1>
 				<p class="m-2 p-2">{t("skills.text_one")}</p>
                 <p class="m-2 p-2">{t("skills.text_two")}</p>
 				<div class="ml-2 pl-2 xl:ml-0 xl:pl-0 md:pl-0 md:ml-0">
