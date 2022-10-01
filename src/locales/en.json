@@ -25,6 +25,7 @@
     "sub_two": "Others"
   },
   "card_project": {
+    "btn": "More Details",
     "descriptions": {
       "bug_tracker": "This is a desktop app to track bugs, that I'm creating to track bugs and issues in my future and current projects.",
       "portfolio": "My personal portfolio using django + reacjs and other tech, This is where I'm going to display my works as a fullstack-developer",
@@ -67,5 +68,8 @@
   },
   "contact_button": {
     "message": "Contact Me"
+  },
+  "project_page": {
+    "title": "PROJECT"
   }
 }

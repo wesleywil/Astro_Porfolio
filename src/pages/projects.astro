@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 //Components
 import Navbar from "../components/Navbar.astro";
 import CardProject from "../components/Card_Project.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
 
 changeLanguage("en");
 ---
@@ -20,7 +21,7 @@ changeLanguage("en");
             <div class="flex flex-col  xl:justify-center text-center gap-2 p-2 m-2 overflow-y-auto">
                 <h1 class="text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
                 <div class=" flex flex-wrap gap-1 justify-center">
-                    <CardProject title="BUG TRACKER" description={t("card_project.descriptions.bug_tracker")} link="https://github.com/wesleywil/bug-tracker" categories={['Reactjs ', '+ Tauri ', '+ Javascript']}/>
+                    <CardProject title="BUG TRACKER" description={t("card_project.descriptions.bug_tracker")} link={localizePath("/projects/1")} categories={['Reactjs ', '+ Tauri ', '+ Javascript']}/>
                     <CardProject title="Portfolio" description={t("card_project.descriptions.portfolio")} link="https://github.com/wesleywil/Portfolio" categories={['Reactjs ', '+ Django']}/>
 					<CardProject title="GOTO PROJECT" description={t("card_project.descriptions.goto")} link="https://github.com/wesleywil/Goto-Project" categories={['Reactjs ', '+ Tauri ', '+ Javascript']}/>
 					<CardProject title="Hotel Project" description={t("card_project.descriptions.hotel_project")} link="https://github.com/wesleywil/hotel-project" categories={['Reactjs ', '+ Django']}/>
