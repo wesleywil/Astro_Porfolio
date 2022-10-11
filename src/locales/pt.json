@@ -28,10 +28,11 @@
     "btn": "Mais Detalhes",
     "descriptions": {
       "bug_tracker": "Este é um aplicativo para desktop usado para acompanhar bugs em aplicativos, Que eu estou criando para utilizar em projetos atuais e futuros.",
-      "portfolio": "Meu portfólio pessoal onde estou usando Django e Reactjs assim como outras tecnologias, Neste projeto irei mostrar meus trabalhos como um desenvolvedor fullstack.",
+      "portfolio": "Meu portfólio pessoal onde estou usando Astro assim como outras tecnologias, Neste projeto irei mostrar meus trabalhos como um desenvolvedor fullstack.",
       "goto": "Este projeto é para gerenciamento de animes, Estou trocando um arquivo de texto com muitos animes que já assisti, estou assistindo ou parei de ver dos ultimos 8 anos, trocarei o arquivo de texto por este aplicativo de computador que pretendo usar diariamente.",
       "hotel_project": "Um projeto no estilo AIRBNB e Serviços de Hoteis, a onde o projeto permite que clientes possam se hospedar em hoteis ou alugar uma casa de campo, estou fazendo este projeto para explorar o uso do Django com Reactjs.",
-      "clothing_shop": "Um projeto de uma loja de roupas que criei atraves do curso Zero to Mastery em Reactjs"
+      "clothing_shop": "Um projeto de uma loja de roupas que criei atraves do curso Zero to Mastery em Reactjs",
+      "pfc_blog": "Este é um projeto de conclusão de curso sobre um blog de tecnologia"
     }
   },
   "skills": {

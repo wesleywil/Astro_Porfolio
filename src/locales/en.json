@@ -28,10 +28,11 @@
     "btn": "More Details",
     "descriptions": {
       "bug_tracker": "This is a desktop app to track bugs, that I'm creating to track bugs and issues in my future and current projects.",
-      "portfolio": "My personal portfolio using django + reacjs and other tech, This is where I'm going to display my works as a fullstack-developer",
+      "portfolio": "My personal portfolio using Astro and other tech, This is where I'm going to display my works as a fullstack-developer",
       "goto": "This project is for my animes management, I'm replacing a notepad txt with a lot animes that I watched, still watching or dropped for the last 8 years to this new project that I pretend to use daily",
       "hotel_project": "An Hotel/AIRBNB style project to let customers to get rooms in hotels or cabins in the woods, I'm using this to explore how to use Django with Reactjs",
-      "clothing_shop": "A Clothing Shop project build in the course zero to hero REACTJS"
+      "clothing_shop": "A Clothing Shop project build in the course zero to hero REACTJS",
+      "pfc_blog": "This is a university project about a tech blog"
     }
   },
   "skills": {

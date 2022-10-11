@@ -3,7 +3,7 @@
 import Layout from "../layouts/Layout.astro";
 //Components
 import Navbar from "../components/Navbar.astro";
-import CardProject from "../components/Card_Project.astro";
+import CardProject2 from "../components/CardProject2.astro";
 import { t, changeLanguage } from "i18next";
 import { localizePath } from "astro-i18next";
 
@@ -18,18 +18,54 @@ changeLanguage("en");
 			<div class="md-color font-bold">
 				<h1 class="text-3xl xl:text-8xl md:text-5xl  text-center">{t("projects.title")}</h1>
 			</div>
-            <div class="flex flex-col  xl:justify-center text-center gap-2 p-2 m-2 overflow-y-auto">
-                <h1 class="text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
-                <div class=" flex flex-wrap gap-1 justify-center">
-                    <CardProject title="BUG TRACKER" description={t("card_project.descriptions.bug_tracker")} link={localizePath("/projects/1")} categories={['Reactjs ', '+ Tauri ', '+ Javascript']}/>
-                    <CardProject title="Portfolio" description={t("card_project.descriptions.portfolio")} link={localizePath("/projects/2")} categories={['Reactjs ', '+ Django']}/>
-					<CardProject title="GOTO PROJECT" description={t("card_project.descriptions.goto")} link={localizePath("/projects/3")} categories={['Reactjs ', '+ Tauri ', '+ Javascript']}/>
-					<CardProject title="Hotel Project" description={t("card_project.descriptions.hotel_project")} link={localizePath("/projects/4")} categories={['Reactjs ', '+ Django']}/>
-                </div>
-                <h1 class="text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_two")}</h1>
-                <div class=" flex gap-2 justify-center">
-                    <CardProject title="Clothing Shop" description={t("card_project.descriptions.clothing_shop")} link={localizePath("/projects/5")} categories={['Reactjs ', '+ Javascript', '+ Firebase']}/>
-                </div>
+            <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
+            <div class="flex justify-center flex-wrap gap-2 m-4">
+                <CardProject2 
+                    title="PFC TechBlog" 
+                    description={t("card_project.descriptions.pfc_blog")}
+                    link="https://github.com/wesleywil/PFC-TechBlog"
+                    categories={['Django ', '+ Tailwindcss ']}
+                    img="https://i.imgur.com/mZFKLhn.png"
+                />
+                <CardProject2 
+                    title="Bug Tracker" 
+                    description={t("card_project.descriptions.bug_tracker")}
+                    link="https://github.com/wesleywil/bug-tracker"
+                    categories={['Reactjs ', '+ Tauri ', '+ Javascript']}
+                    img="https://i.imgur.com/bUqL4Z1.gif"
+                />
+                <CardProject2 
+                    title="Portfolio" 
+                    description={t("card_project.descriptions.portfolio")} 
+                    link="https://github.com/wesleywil/Portfolio"
+                    categories={['Astro ', '+ Tailwind']}
+                    img="https://dummyimage.com/300x200"
+                />
+                <CardProject2 
+                    title="GOTO PROJECT" 
+                    description={t("card_project.descriptions.goto")} 
+                    link="https://github.com/wesleywil/Goto-Project"
+                    categories={['Reactjs ', '+ Tauri ', '+ Javascript']}
+                    img="https://i.imgur.com/nNGuD73.gif"
+                />
+                <CardProject2 
+                    title="Hotel Project" 
+                    description={t("card_project.descriptions.hotel_project")} 
+                    link="https://github.com/wesleywil/hotel-project"
+                    categories={['Reactjs ', '+ Django']}
+                    img="https://i.imgur.com/ZI9rjuJ.png"
+                />
+            </div>
+            <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_two")}</h1>
+            <div class="flex justify-center flex-wrap gap-2 m-4">
+                <CardProject2 
+                    title="Clothing Shop" 
+                    description="Este é um projeto de conclusão de curso sobre um blog de tecnologia"
+                    link="https://github.com/wesleywil/clothing-shop"
+                    categories={['Reacjts ', '+ Firebase +', ' Stripe']}
+                    img="https://i.imgur.com/zzNa5Vk.png"
+                />
+                
             </div>
 		</div>
         
@@ -38,6 +74,15 @@ changeLanguage("en");
 </Layout>
 
 <style>
+    .img_change{
+        border-radius:10px;
+        width:500px;
+        height:350px;
+        transition: 300ms ease-in;
+    }
+    .img_change:hover{
+        transform: scale(1.1);
+    }
 
 	.size_window{
 		height:100vh;
