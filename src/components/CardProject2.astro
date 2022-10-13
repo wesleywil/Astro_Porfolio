@@ -14,7 +14,7 @@ const {title, description, img, link, categories} = Astro.props;
   <div class="overflow-hidden">
     <img alt="gallery" class="img_change absolute inset-0 object-cover object-center" src={img}>
   </div>
-    <div class="m_details px-8 py-10 relative z-10  bg-color opacity-0 hover:opacity-100">
+    <div class="m_details px-8 py-10 relative z-10  bg-color  opacity-100 md:opacity-0 xl:opacity-0 hover:opacity-100">
         <h2 class="tracking-widest text-sm title-font font-medium lg-color mb-1">{categories}</h2>
         <h1 class="title-font text-lg font-medium mb-3 md-color">{title}</h1>
         <p class="leading-relaxed lg-color p-2">{description}</p>
@@ -46,9 +46,20 @@ const {title, description, img, link, categories} = Astro.props;
     .img_change:hover{
       transform: scale(1.1);
     }
+
     .m_details{
       width:500px;
       margin-top: 150px;
       border-radius:10px;
     }
+    @media(max-width: 420px) {
+        .img_change{
+            width: 300px;
+            height:150px;
+        }
+        .m_details{
+          width: 250px;
+        }
+    }
+
 </style>

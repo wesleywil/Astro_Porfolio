@@ -5,21 +5,20 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import CardProject2 from "../components/CardProject2.astro";
 import { t, changeLanguage } from "i18next";
-import { localizePath } from "astro-i18next";
 
 changeLanguage("en");
 ---
 
 <Layout>
-<div class='flex size_window'>
+<div class='flex size_window overflow-hidden'>
 	<Navbar/>
     <div class="flex justify-center xl:items-center mx-auto w-full xl:gap-24 md:gap-4">
 		<div class="flex flex-col gap-2 float-left">
 			<div class="md-color font-bold">
 				<h1 class="text-3xl xl:text-8xl md:text-5xl  text-center">{t("projects.title")}</h1>
 			</div>
-            <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
-            <div class="flex justify-center flex-wrap gap-2 m-4">
+            <h1 class="ml-0 md:ml-4 xl:ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
+            <div class="flex justify-center  flex-wrap gap-2 m-0 xl:m-4 md:m-4 ">
                 <CardProject2 
                     title="PFC TechBlog" 
                     description={t("card_project.descriptions.pfc_blog")}
@@ -39,7 +38,7 @@ changeLanguage("en");
                     description={t("card_project.descriptions.portfolio")} 
                     link="https://github.com/wesleywil/Portfolio"
                     categories={['Astro ', '+ Tailwind']}
-                    img="https://dummyimage.com/300x200"
+                    img="https://i.imgur.com/MjDsu8W.png"
                 />
                 <CardProject2 
                     title="GOTO PROJECT" 
@@ -74,15 +73,6 @@ changeLanguage("en");
 </Layout>
 
 <style>
-    .img_change{
-        border-radius:10px;
-        width:500px;
-        height:350px;
-        transition: 300ms ease-in;
-    }
-    .img_change:hover{
-        transform: scale(1.1);
-    }
 
 	.size_window{
 		height:100vh;
