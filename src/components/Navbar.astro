@@ -6,8 +6,8 @@ import { localizePath } from "astro-i18next";
 
 ---
 
-<div class=" flex flex-col xl:justify-between items-center sm:w-52 w-24 p-2 narbar_bg ">
-    <div class="block sm:hidden">
+<div class=" flex flex-col items-center sm:w-52 w-24 p-2 narbar_bg ">
+    <!-- <div class="block sm:hidden">
         <h1 class="font-bold navbar_text border-b text-center">
             <a href={localizePath("/")}>{t("navbar.title")}</a>
            </h1>
@@ -17,7 +17,7 @@ import { localizePath } from "astro-i18next";
             <NavbarLink link_text={t("navbar.links.about")} link={localizePath("/about")}/>
             <NavbarLink link_text={t("navbar.links.contact")} link={localizePath("/contact")}/>
         </ul>
-    </div>
+    </div> -->
     <div class="hidden sm:block">
         <a href={localizePath("/")}>
             <img src="/lighter_logo.svg" alt="wesley wilson logo" class="w-24 mx-auto px-4">
@@ -25,7 +25,10 @@ import { localizePath } from "astro-i18next";
         </a>
     </div>
     
-    <ul class="text-xl sm:text-3xl font-semibold p-2 hidden sm:block md:my-4">
+    <ul class="text-xl sm:text-3xl font-semibold p-2  md:my-4">
+        <h1 class="font-bold navbar_text border-b text-center block xl:hidden md:hidden">
+            <a href={localizePath("/")}>{t("navbar.title")}</a>
+           </h1>
         <NavbarLink link_text={t("navbar.links.projects")} link={localizePath("/projects")}/>
         <NavbarLink link_text={t("navbar.links.skills")} link={localizePath("/skills")}/>
         <NavbarLink link_text={t("navbar.links.about")} link={localizePath("/about")}/>
@@ -68,10 +71,10 @@ import { localizePath } from "astro-i18next";
 
     @keyframes shrinkjump {
   0% {
-    transform: rotateX(0deg) scaleX(1.8);
+    transform: rotateX(0deg) scaleX(1.1);
   }
   50%{
-    transform: rotateX(360deg) scaleX(2.2);
+    transform: rotateX(360deg) scaleX(.8);
   }
   100% {
     transform: rotateX(0deg);
