@@ -3,8 +3,8 @@ import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
 ---
 
-<div class="flex mt-2 xl:ml-4 md:ml-4">
-    <a href={localizePath("/contact")} class="text-color sm:text-3xl font-semibold px-2 py-1 rounded-xl transition duration-700 ease-in-out">{t("contact_button.message")}</a>
+<div class="flex">
+    <a href={localizePath("/contact")} class="text-color sm:text-3xl font-semibold px-2 py-1 rounded transition duration-700 ease-in-out">{t("contact_button.message")}</a>
 </div>
 
 <style>

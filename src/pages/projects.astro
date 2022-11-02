@@ -10,7 +10,7 @@ changeLanguage("en");
 ---
 
 <Layout>
-<div class='flex size_window overflow-hidden'>
+<div class='size_window overflow-hidden'>
 	<Navbar/>
     <div class="flex justify-center xl:items-center mx-auto w-full xl:gap-24 md:gap-4">
 		<div class="flex flex-col gap-2 float-left">
@@ -18,7 +18,8 @@ changeLanguage("en");
 				<h1 class="text-3xl xl:text-8xl md:text-5xl  text-center">{t("projects.title")}</h1>
 			</div>
             <h1 class="ml-0 md:ml-4 xl:ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
-            <div class="flex justify-center  flex-wrap gap-2 m-0 mr-4 xl:m-4 md:m-4 ">
+            
+            <div class="w-screen flex md:flex-wrap md:justify-center  gap-2 overflow-x-auto p-2 snap-x">
                 <CardProject2 
                     title="PFC TechBlog" 
                     description={t("card_project.descriptions.pfc_blog")}
@@ -55,8 +56,9 @@ changeLanguage("en");
                     img="https://i.imgur.com/ZI9rjuJ.png"
                 />
             </div>
+           
             <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_two")}</h1>
-            <div class="flex justify-center flex-wrap gap-2 m-4">
+            <div class="w-screen flex md:flex-wrap md:justify-center gap-2 overflow-x-auto p-2 snap-x">
                 <CardProject2 
                     title="Clothing Shop" 
                     description="Este é um projeto de conclusão de curso sobre um blog de tecnologia"

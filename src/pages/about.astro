@@ -5,16 +5,16 @@ import Main from "../layouts/Main.astro";
 //Components
 import Navbar from "../components/Navbar.astro";
 import ContactButton from "../components/Contact_Button.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
 <Layout>
-<div class='flex h-screen'>
+<div class='h-full md:h-screen '>
 	<Navbar/>
-	<Main myClass="flex flex-col xl:flex-row md:flex-row  items-center w-full pl-2">
-		<div class="flex gap-4 xl:justify-between md:justify-center">
+	<Main myClass="flex flex-col xl:flex-row md:flex-row  items-center w-full p-2">
+		<div class="xl:mt-24 flex flex-col xl:flex-row gap-4 xl:justify-between md:justify-center">
 			<div class="xl:w-2/5 md:w-full text-base xl:text-2xl md:text-2xl self-center lg-color font-semibold">
                 <h1 class="mb-2 xl:m-2 md:m-2 p-2 text-4xl xl:text-6xl md:text-6xl"><span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">{t("about.first_letter_one")}</span>{t("about.title_one")} <span class="m-0 md-color text-5xl xl:text-7xl md:text-7xl">{t("about.first_letter_two")}</span>{t("about.title_two")}</h1>
 				<p class="xl:m-2 md:m-2 mb-2 xl:p-2 md:p-2 text-left xl:text-justify">{t("about.one")}</p>
@@ -22,9 +22,12 @@ changeLanguage("en");
                 <p class="xl:m-2 md:m-2 mt-2 xl:p-2 md:p-2 text-left xl:text-justify">
 					{t("about.three")}
                 </p>
-				<ContactButton/>
+				<div class="xl:my-4 xl:p-4 md:my-4 md:p-4">
+					<ContactButton/>
+				</div>
+				
 			</div>
-            <div class="flex flex-col hidden xl:block mr-12">
+            <div class="flex flex-col  xl:mr-12 md:w-1/2 md:self-center">
                 <img src="/programming.svg" alt="Programming Image">
             </div>
 		</div>
