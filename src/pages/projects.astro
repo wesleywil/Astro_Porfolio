@@ -1,104 +1,114 @@
 ---
-// Layouts
 import Layout from "../layouts/Layout.astro";
-//Components
+// Components
 import Navbar from "../components/Navbar.astro";
-import CardProject2 from "../components/CardProject2.astro";
+import ProjectCard2 from "../components/ProjectCard2.astro";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
 <Layout>
-<div class='size_window overflow-hidden'>
-	<Navbar/>
-    <div class="flex justify-center xl:items-center mx-auto w-full xl:gap-24 md:gap-4">
-		<div class="flex flex-col gap-2 float-left">
-			<div class="md-color font-bold">
-				<h1 class="text-3xl xl:text-8xl md:text-5xl  text-center">{t("projects.title")}</h1>
-			</div>
-            <h1 class="ml-0 md:ml-4 xl:ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_one")}</h1>
-            
-            <div class="w-screen flex md:flex-wrap md:justify-center  gap-2 overflow-x-auto p-2 snap-x">
-                <CardProject2 
-                    title="PFC TechBlog" 
-                    description={t("card_project.descriptions.pfc_blog")}
-                    link="https://github.com/wesleywil/PFC-TechBlog"
-                    categories={['Django ', '+ Tailwindcss ']}
-                    img="https://i.imgur.com/mZFKLhn.png"
-                />
-                <CardProject2 
-                    title="Bug Tracker" 
-                    description={t("card_project.descriptions.bug_tracker")}
-                    link="https://github.com/wesleywil/bug-tracker"
-                    categories={['Reactjs ', '+ Tauri ', '+ Javascript']}
-                    img="https://i.imgur.com/bUqL4Z1.gif"
-                />
-                <CardProject2 
-                    title="Portfolio" 
-                    description={t("card_project.descriptions.portfolio")} 
-                    link="https://github.com/wesleywil/Portfolio"
-                    categories={['Astro ', '+ Tailwind']}
-                    img="https://i.imgur.com/MjDsu8W.png"
-                />
-                <CardProject2 
-                    title="GOTO PROJECT" 
-                    description={t("card_project.descriptions.goto")} 
-                    link="https://github.com/wesleywil/Goto-Project"
-                    categories={['Reactjs ', '+ Tauri ', '+ Javascript']}
-                    img="https://i.imgur.com/nNGuD73.gif"
-                />
-                <CardProject2 
-                    title="Hotel Project" 
-                    description={t("card_project.descriptions.hotel_project")} 
-                    link="https://github.com/wesleywil/hotel-project"
-                    categories={['Reactjs ', '+ Django']}
-                    img="https://i.imgur.com/ZI9rjuJ.png"
-                />
-            </div>
-           
-            <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">{t("projects.sub_two")}</h1>
-            <div class="w-screen flex md:flex-wrap md:justify-center gap-2 overflow-x-auto p-2 snap-x">
-                <CardProject2 
-                    title="Clothing Shop" 
-                    description="Este é um projeto de conclusão de curso sobre um blog de tecnologia"
-                    link="https://github.com/wesleywil/clothing-shop"
-                    categories={['Reacjts ', '+ Firebase +', ' Stripe']}
-                    img="https://i.imgur.com/zzNa5Vk.png"
-                />
-                
-            </div>
-		</div>
-        
+  <div class="size_window">
+    <Navbar />
+    <div
+      class="flex justify-center xl:items-center mx-auto w-full xl:gap-24 md:gap-4"
+    >
+      <div class="flex flex-col gap-2 float-left">
+        <div class="md-color font-bold">
+          <h1 class="text-3xl xl:text-8xl md:text-5xl text-center">
+            {t("projects.title")}
+          </h1>
+        </div>
+        <h1
+          class="ml-0 md:ml-4 xl:ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl"
+        >
+          {t("projects.sub_one")}
+        </h1>
+        <h1 class="md:hidden mx-auto text-center lg-color px-2 flex gap-2">
+          &#8592; {t("projects.slide_message")} &#8594;
+        </h1>
+        <div
+          class="w-screen flex md:flex-wrap md:justify-center gap-2 overflow-x-auto overflow-y-hidden p-2 snap-x"
+        >
+          <ProjectCard2
+            title="PFC TechBlog"
+            description={t("card_project.descriptions.pfc_blog")}
+            link="https://github.com/wesleywil/PFC-TechBlog"
+            categories={["Django ", "+ Tailwindcss "]}
+            img="https://i.imgur.com/mZFKLhn.png"
+          />
+          <ProjectCard2
+            title="Bug Tracker"
+            description={t("card_project.descriptions.bug_tracker")}
+            link="https://github.com/wesleywil/bug-tracker"
+            categories={["Reactjs ", "+ Tauri ", "+ Javascript"]}
+            img="https://i.imgur.com/bUqL4Z1.gif"
+          />
+          <ProjectCard2
+            title="Portfolio"
+            description={t("card_project.descriptions.portfolio")}
+            link="https://github.com/wesleywil/Portfolio"
+            categories={["Astro ", "+ Tailwind"]}
+            img="https://i.imgur.com/MjDsu8W.png"
+          />
+          <ProjectCard2
+            title="GOTO PROJECT"
+            description={t("card_project.descriptions.goto")}
+            link="https://github.com/wesleywil/Goto-Project"
+            categories={["Reactjs ", "+ Tauri ", "+ Javascript"]}
+            img="https://i.imgur.com/nNGuD73.gif"
+          />
+          <ProjectCard2
+            title="Hotel Project"
+            description={t("card_project.descriptions.hotel_project")}
+            link="https://github.com/wesleywil/hotel-project"
+            categories={["Reactjs ", "+ Django"]}
+            img="https://i.imgur.com/ZI9rjuJ.png"
+          />
+        </div>
+        <h1 class="ml-4 text-center text-white text-xl xl:text-4xl md:text-2xl">
+          {t("projects.sub_two")}
+        </h1>
+        <div
+          class="w-screen flex md:flex-wrap md:justify-center gap-2 overflow-x-auto p-2 snap-x"
+        >
+          <ProjectCard2
+            title="Clothing Shop"
+            description="Este é um projeto de conclusão de curso sobre um blog de tecnologia"
+            link="https://github.com/wesleywil/clothing-shop"
+            categories={["Reacjts ", "+ Firebase +", " Stripe"]}
+            img="https://i.imgur.com/zzNa5Vk.png"
+          />
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 </Layout>
 
 <style>
+  .size_window {
+    height: 100vh;
+  }
 
-	.size_window{
-		height:100vh;
-	}
+  @media (max-height: 2000px) {
+    .size_window {
+      height: 100%;
+    }
+  }
 
-	@media(max-height:2000px){
-		.size_window{
-			height: 100%;
-		}
-	}
+  .lg-color {
+    color: var(--lighter-color);
+  }
+  .md-color {
+    color: var(--mid-color);
+  }
+  .dk-color {
+    color: var(--darker-color);
+  }
 
-	.lg-color{
-		color:var(--lighter-color)
-	}
-	.md-color{
-		color:var(--mid-color);
-	}
-	.dk-color{
-		color: var(--darker-color);
-	}
-
-	.md-border:hover{
-		border:1px solid var(--mid-color);
-		color:var(--mid-color)
-	}
-
+  .md-border:hover {
+    border: 1px solid var(--mid-color);
+    color: var(--mid-color);
+  }
 </style>
