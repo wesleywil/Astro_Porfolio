@@ -1,36 +1,37 @@
 ---
-
-import ButtonTop from '../components/Button_top.astro';
+import ButtonTop from "../components/Button_top.astro";
 
 import i18next, { t } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
-
 ---
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/lighter_logo.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{t("site.title")}</title>
-		<meta name="description" content={t("site.description")} />
-	</head>
-	<body>
-		<slot />
-		<ButtonTop/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/lighter_logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{t("site.title")}</title>
+    <meta name="description" content={t("site.description")} />
+  </head>
+  <body>
+    <slot />
+    <ButtonTop />
+  </body>
 </html>
 
 <style>
-	:root{
-		--darker-color:#512611;
-		--mid-color:#f79428;
-		--lighter-color:#fffdfc;
-	}
+  :root {
+    --darker-color: #512611;
+    --mid-color: #f79428;
+    --lighter-color: #fffdfc;
+  }
 
-	body{
-		background-color: var(--darker-color);
-	}
+  body {
+    background-image: url("/wave-haikei.svg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    height: auto;
+  }
 </style>
