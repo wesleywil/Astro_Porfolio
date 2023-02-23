@@ -24,7 +24,7 @@ const { title, description, img, link, categories } = Astro.props;
         {title}
         <span class="text-base">{categories}</span>
       </h1>
-      <p class="text-xl">{description}</p>
+      <p class="text-xl overflow-y-auto">{description}</p>
       <a href={link}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
