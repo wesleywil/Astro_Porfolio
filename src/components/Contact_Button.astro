@@ -1,19 +1,23 @@
 ---
-import i18next, { t } from "i18next";
+import { t } from "i18next";
 import { localizePath } from "astro-i18next";
 ---
 
 <div class="flex">
-    <a href={localizePath("/contact")} class="text-color sm:text-3xl font-semibold px-2 py-1 rounded transition duration-700 ease-in-out">{t("contact_button.message")}</a>
+  <a
+    href={localizePath("/contact")}
+    class="text-color sm:text-3xl font-semibold px-2 py-1 rounded transition duration-700 ease-in-out"
+    >{t("contact_button.message")}</a
+  >
 </div>
 
 <style>
-    .text-color{
-        color:var(--lighter-color);
-        border:1px solid var(--lighter-color);
-    }
-    .text-color:hover{
-        color:var(--mid-color);
-        border:1px solid var(--mid-color);
-    }
+  .text-color {
+    color: var(--lighter-color);
+    border: 1px solid var(--lighter-color);
+  }
+  .text-color:hover {
+    color: var(--mid-color);
+    border: 1px solid var(--mid-color);
+  }
 </style>

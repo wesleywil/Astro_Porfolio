@@ -21,6 +21,7 @@
   },
   "projects": {
     "title": "Projetos",
+    "slide_message":"Deslize para ver os projetos",
     "sub_one": "Pessoais",
     "sub_two": "Outros"
   },

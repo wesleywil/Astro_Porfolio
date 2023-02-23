@@ -21,6 +21,7 @@
   },
   "projects": {
     "title": "Projects",
+    "slide_message":"Slide to see more projects",
     "sub_one": "Personal",
     "sub_two": "Others"
   },

@@ -5,84 +5,87 @@ import Main from "../layouts/Main.astro";
 //Components
 import Navbar from "../components/Navbar.astro";
 import ContactButton from "../components/Contact_Button.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
 
 changeLanguage("en");
 ---
 
 <Layout>
-<div class='h-screen md:h-full xl:h-screen'>
-	<Navbar/>
-	
-	<Main myClass="flex flex-col xl:flex-row xl:justify-between mt-12">
-			
-		<div class="flex md:items-center  p-2 gap-2">
-			
-			<div class=" w-full flex flex-col md:items-center xl:items-start ml-4 md:ml-0 xl:ml-24 font-bold md-color">
-				<h1 class="text-5xl md:text-9xl">{t("home.presentation")}</h1>
-				<h1 class="text-3xl md:text-6xl xl:text-7xl">{t("home.sub")} 
-					<span class="inline-block m-0 lg-color test text-4xl md:text-7xl xl:text-8xl">W</span>esley 
-					<span class="inline-block lg-color text-4xl md:text-8xl">W</span
-						>ilson,
-				</h1>
-				<h2 class="text-2xl md:text-7xl xl:text-6xl">{t("home.third")}</h2>
-				<h3 class="text-base md:text-5xl xl:text-4xl font-semibold">ReactJs + Django</h3>
-				<div class="w-1/2 flex flex-col xl:flex-row xl:gap-2 mt-6">
-					<span class="">{t("home.language")}</span>
-					<LanguageSelector showFlag={true} class="my-select-class rounded" />
-				</div>
-				
-				<div class="mt-4">
-					<ContactButton/>
-				</div>
-				
-			</div>
-		</div>
-		<div class="w-80  md:w-3/4 xl:w-1/2 md:self-center">
-			<img src="/web-development.svg" alt="Web Development Image">
-		</div>
-	</Main>
-</div>
+  <div class="h-screen md:h-full xl:h-screen">
+    <Navbar />
+
+    <Main myClass="flex flex-col xl:flex-row xl:justify-between mt-12">
+      <div class="flex md:items-center p-2 gap-2">
+        <div
+          class="w-full flex flex-col md:items-center xl:items-start ml-4 md:ml-0 xl:ml-24 font-bold md-color"
+        >
+          <h1 class="text-5xl md:text-9xl">{t("home.presentation")}</h1>
+          <h1 class="text-3xl md:text-6xl xl:text-7xl">
+            {t("home.sub")}
+            <span
+              class="inline-block m-0 lg-color test text-4xl md:text-7xl xl:text-8xl"
+              >W</span
+            >esley
+            <span class="inline-block lg-color text-4xl md:text-8xl">W</span
+            >ilson,
+          </h1>
+          <h2 class="text-2xl md:text-7xl xl:text-6xl">{t("home.third")}</h2>
+          <h3 class="text-base md:text-5xl xl:text-4xl font-semibold">
+            ReactJs + Django
+          </h3>
+          <div class="w-1/2 flex flex-col xl:flex-row xl:gap-2 mt-6">
+            <span class="">{t("home.language")}</span>
+            <LanguageSelector showFlag={true} class="my-select-class rounded" />
+          </div>
+
+          <div class="mt-4">
+            <ContactButton />
+          </div>
+        </div>
+      </div>
+      <div class="w-80 md:w-3/4 xl:w-1/2 md:self-center">
+        <img src="/web-development.svg" alt="Web Development Image" />
+      </div>
+    </Main>
+  </div>
 </Layout>
 
 <style>
-	.lg-color{
-		color:var(--lighter-color)
-	}
-	.lg-color:hover{
-		animation: letter_animation 2s ease-in;
-		animation-iteration-count: infinite;
-	}
-	.md-color{
-		color:var(--mid-color);
-	}
-	.dk-color{
-		color: var(--darker-color);
-	}
-	@keyframes letter_animation {
-  		0% {
-    		transform: rotateY(0deg);
-  		}
-		50%{
-			transform:rotateZ(-30deg);
-		}
-  		75%{
-    		transform: rotateZ(30deg);
-  		}
-		100%{
-			transform:rotateZ(0deg);
-		}
-		
-	}
+  .lg-color {
+    color: var(--lighter-color);
+  }
+  .lg-color:hover {
+    animation: letter_animation 2s ease-in;
+    animation-iteration-count: infinite;
+  }
+  .md-color {
+    color: var(--mid-color);
+  }
+  .dk-color {
+    color: var(--darker-color);
+  }
+  @keyframes letter_animation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateZ(-30deg);
+    }
+    75% {
+      transform: rotateZ(30deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
 
-	.bg-container{
-		width:900px;
-	}
-	@media(max-width:1200px){
-		.bg-container{
-			width:600px;
-		}
-	}
-
+  .bg-container {
+    width: 900px;
+  }
+  @media (max-width: 1200px) {
+    .bg-container {
+      width: 600px;
+    }
+  }
 </style>

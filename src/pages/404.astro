@@ -3,82 +3,87 @@
 import Layout from "../layouts/Layout.astro";
 //Components
 import Navbar from "../components/Navbar.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import { localizePath } from "astro-i18next";
 
 changeLanguage("en");
 ---
 
 <Layout>
-<div class='h-full '>
-	<Navbar/>
-	<div class="flex items-center h-screen w-full">
-        <div class="flex flex-col align-center self-center justify-center w-full">
-            <h1 class="self-center text-6xl xl:text-8xl md:text-8xl font-bold mb-4 p-2 md-color">{t("404.warning")}</h1>
-            <h2 class="self-center text-2xl xl:text-4xl md:text-4xl font-semibold  p-2 md-color">{t("404.status")}</h2>
-            <div class="self-center mt-2 text-center md-color">
-                <p class="self-center ">{t("404.text_one")}</p>
-                <p class="self-center">{t("404.text_two")}</p>
-            </div>
-            <div class="self-center mt-6">
-                <a href={localizePath("/")} class="button_homepage">{t("404.btn")}</a>
-            </div>
-            
+  <div class="h-full">
+    <Navbar />
+    <div class="flex items-center h-screen w-full">
+      <div class="flex flex-col align-center self-center justify-center w-full">
+        <h1
+          class="self-center text-6xl xl:text-8xl md:text-8xl font-bold mb-4 p-2 md-color"
+        >
+          {t("404.warning")}
+        </h1>
+        <h2
+          class="self-center text-2xl xl:text-4xl md:text-4xl font-semibold p-2 md-color"
+        >
+          {t("404.status")}
+        </h2>
+        <div class="self-center mt-2 text-center md-color">
+          <p class="self-center">{t("404.text_one")}</p>
+          <p class="self-center">{t("404.text_two")}</p>
         </div>
+        <div class="self-center mt-6">
+          <a href={localizePath("/")} class="button_homepage">{t("404.btn")}</a>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 </Layout>
 
 <style>
-	.lg-color{
-		color:var(--lighter-color)
-	}
-	.lg-color:hover{
-		animation: letter_animation 2s ease-in;
-		animation-iteration-count: infinite;
-	}
-	.md-color{
-		color:var(--mid-color);
-	}
-	.dk-color{
-		color: var(--darker-color);
-	}
+  .lg-color {
+    color: var(--lighter-color);
+  }
+  .lg-color:hover {
+    animation: letter_animation 2s ease-in;
+    animation-iteration-count: infinite;
+  }
+  .md-color {
+    color: var(--mid-color);
+  }
+  .dk-color {
+    color: var(--darker-color);
+  }
 
-    .button_homepage{
-        font-size: 1.4rem;
-        font-weight: bold;
-        border:1px solid var(--mid-color);
-        padding: 2px 10px;
-        border-radius:10px;
-        color:var(--mid-color);
+  .button_homepage {
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 1px solid var(--mid-color);
+    padding: 2px 10px;
+    border-radius: 10px;
+    color: var(--mid-color);
+  }
+  .button_homepage:hover {
+    border: 1px solid var(--lighter-color);
+    color: var(--lighter-color);
+  }
+  @keyframes letter_animation {
+    0% {
+      transform: rotateY(0deg);
     }
-    .button_homepage:hover{
-        border: 1px solid var(--lighter-color);
-        color: var(--lighter-color);
+    50% {
+      transform: rotateZ(-30deg);
     }
-	@keyframes letter_animation {
-  		0% {
-    		transform: rotateY(0deg);
-  		}
-		50%{
-			transform:rotateZ(-30deg);
-		}
-  		75%{
-    		transform: rotateZ(30deg);
-  		}
-		100%{
-			transform:rotateZ(0deg);
-		}
-		
-	}
+    75% {
+      transform: rotateZ(30deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
 
-	.bg-container{
-		width:900px;
-	}
-	@media(max-width:1200px){
-		.bg-container{
-			width:600px;
-		}
-	}
-
+  .bg-container {
+    width: 900px;
+  }
+  @media (max-width: 1200px) {
+    .bg-container {
+      width: 600px;
+    }
+  }
 </style>
